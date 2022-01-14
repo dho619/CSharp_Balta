@@ -7,11 +7,11 @@ namespace ModernStore.Domain.Entities
 {
     public class Customer : Entity
     {
-        public Customer(string firstName, string lastName, DateTime? birthDay, string email, User user)
+        public Customer(string firstName, string lastName, string email, User user)
         {
             FirstName = firstName;
             LastName = lastName;
-            BirthDay = birthDay;
+            BirthDay = null;
             Email = email;
             User = user;
 

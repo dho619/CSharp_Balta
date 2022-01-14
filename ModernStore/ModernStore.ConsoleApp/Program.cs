@@ -11,7 +11,6 @@ namespace ModernStore.ConsoleApp
             var customer = new Customer(
                 "a", 
                 "a", 
-                null, 
                 "atimcabum.com", 
                 user);
 
