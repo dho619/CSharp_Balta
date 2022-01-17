@@ -21,13 +21,19 @@ namespace ModernStore.ConsoleApp
             //    }
             //}
             //Console.WriteLine(customer.ToString());
-            var mouse = new Product("Mouse", 299, "mouse.jpg", 5);
-            var mousePad = new Product("Mouse Pad", 99, "mousePad.jpg", 7);
-            var teclado = new Product("Teclado", 599, "teclado.jpg", 2);
+            var mouse = new Product("Mouse", 299, "mouse.jpg", 20);
+            var mousePad = new Product("Mouse Pad", 99, "mousePad.jpg", 20);
+            var teclado = new Product("Teclado", 599, "teclado.jpg", 20);
+
+            Console.WriteLine($"Mouses: {mouse.QuantityOnHand}");
+            Console.WriteLine($"Mouse Pads: {mousePad.QuantityOnHand}");
+            Console.WriteLine($"Teclados: {teclado.QuantityOnHand}");
+
+            Console.WriteLine("");
 
             var order = new Order(customer, 8, 10);
-            order.AddItem(new OrderItem(mouse, 1));
-            order.AddItem(new OrderItem(mousePad, 3));
+            order.AddItem(new OrderItem(mouse, 2));
+            order.AddItem(new OrderItem(mousePad, 2));
             order.AddItem(new OrderItem(teclado, 2));
 
             Console.WriteLine($"Número do Pedido: {order.Number}");
@@ -37,6 +43,12 @@ namespace ModernStore.ConsoleApp
             Console.WriteLine($"Sub total: {order.SubTotal()}");
             Console.WriteLine($"Sub total: {order.Total()}");
             Console.WriteLine($"Cliente: {order.Customer.ToString()}");
+
+            Console.WriteLine("");
+
+            Console.WriteLine($"Mouses: {mouse.QuantityOnHand}");
+            Console.WriteLine($"Mouse Pads: {mousePad.QuantityOnHand}");
+            Console.WriteLine($"Teclados: {teclado.QuantityOnHand}");
         }
     }
 }

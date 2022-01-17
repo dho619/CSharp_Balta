@@ -20,5 +20,7 @@ namespace ModernStore.Domain.Entities
         public string Image { get; private set; }
         public int QuantityOnHand { get; private set; }
 
+        public void DecreaseQuantity(int quantity) => QuantityOnHand -= quantity;
+
     }
 }

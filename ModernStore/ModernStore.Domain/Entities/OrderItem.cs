@@ -15,7 +15,10 @@ namespace ModernStore.Domain.Entities
             Price = Product.Price;
 
             new ValidationContract<OrderItem>(this)
-                .IsGreaterThan(x => x.Quantity, 0);
+                .IsGreaterThan(x => x.Quantity, 1)
+                .IsGreaterThan(x => x.Product.QuantityOnHand, Quantity + 1, "Produto sem estoque! :(");
+            
+            Product.DecreaseQuantity(Quantity);
         }
 
         public Product Product { get; private set; }     
