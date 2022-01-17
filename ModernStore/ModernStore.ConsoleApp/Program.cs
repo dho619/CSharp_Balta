@@ -1,4 +1,5 @@
 ﻿using ModernStore.Domain.Entities;
+using ModernStore.Domain.ValueObjects;
 using System;
 
 namespace ModernStore.ConsoleApp
@@ -7,12 +8,11 @@ namespace ModernStore.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var user = new User("atimCabum", "atim");
-            var customer = new Customer(
-                "Atim", 
-                "Cabum", 
-                "atim@cabum.com", 
-                user);
+            var name = new Name("Atim","Cabum");
+            var email = new Email("atim@cabum.com");
+            var document = new Document("33641846820");//gerado por gerado de CPF
+            var user = new User("atimCabum", "atim123");
+            var customer = new Customer(name,email,document,user);
             //if (!customer.IsValid())
             //{
             //    foreach (var notification in customer.Notifications)
