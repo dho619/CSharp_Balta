@@ -15,7 +15,7 @@ namespace ModernStore.Domain.Entities
         {
             Customer = customer;
             CreateDate = DateTime.Now;
-            Number = Guid.NewGuid().ToString().Substring(0, 9).ToUpper();
+            Number = Guid.NewGuid().ToString().Substring(0, 8).ToUpper();
             Status = EOrderStatus.Created;
             DeliveryFee = deliveryFee;
             Discount = discount;
