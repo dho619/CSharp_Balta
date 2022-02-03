@@ -61,6 +61,24 @@ namespace SpaUserControl.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email already in use.
+        /// </summary>
+        public static string DuplicateEmail {
+            get {
+                return ResourceManager.GetString("DuplicateEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credential is invalid.
+        /// </summary>
+        public static string InvalidCredentials {
+            get {
+                return ResourceManager.GetString("InvalidCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail is invalid.
         /// </summary>
         public static string InvalidEmail {
@@ -102,6 +120,15 @@ namespace SpaUserControl.Common.Resources {
         public static string PasswordDoNotMatch {
             get {
                 return ResourceManager.GetString("PasswordDoNotMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User not found.
+        /// </summary>
+        public static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
         }
     }
