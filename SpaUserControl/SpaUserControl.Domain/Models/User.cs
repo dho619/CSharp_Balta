@@ -7,6 +7,7 @@ namespace SpaUserControl.Domain.Models
     public class User
     {
         #region Ctor
+        protected User() { }
         public User(string name, string email)
         {
             Id = Guid.NewGuid();
@@ -48,7 +49,7 @@ namespace SpaUserControl.Domain.Models
 
         public void Validate()
         {
-            AssertionConcern.AssertArgumentLength(this.Name, 3, 250, Errors.InvalidUserName);
+            AssertionConcern.AssertArgumentLength(this.Name, 3, 60, Errors.InvalidUserName);
             EmailAssertionConcern.AssertIsValid(this.Email);
             PasswordAssertionConcern.AssertIsValid(this.Password);
         }

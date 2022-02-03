@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaUserControl.Domain", "SpaUserControl.Domain\SpaUserControl.Domain.csproj", "{5F32D52B-71BF-4E81-8108-FED2B2665CC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaUserControl.Domain", "SpaUserControl.Domain\SpaUserControl.Domain.csproj", "{5F32D52B-71BF-4E81-8108-FED2B2665CC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaUserControl.Common", "SpaUserControl.Common\SpaUserControl.Common.csproj", "{C372AEF0-20BE-4F9C-BE98-6A5F0BD8BF3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaUserControl.Common", "SpaUserControl.Common\SpaUserControl.Common.csproj", "{C372AEF0-20BE-4F9C-BE98-6A5F0BD8BF3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaUserControl.Infraestructure", "SpaUserControl.Infraestructure\SpaUserControl.Infraestructure.csproj", "{602D1758-5E5E-4823-832E-A6F852387441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{74DED1D9-3C64-4E1F-985D-3CAE92CF612A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{C372AEF0-20BE-4F9C-BE98-6A5F0BD8BF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C372AEF0-20BE-4F9C-BE98-6A5F0BD8BF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C372AEF0-20BE-4F9C-BE98-6A5F0BD8BF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602D1758-5E5E-4823-832E-A6F852387441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602D1758-5E5E-4823-832E-A6F852387441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602D1758-5E5E-4823-832E-A6F852387441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602D1758-5E5E-4823-832E-A6F852387441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DED1D9-3C64-4E1F-985D-3CAE92CF612A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DED1D9-3C64-4E1F-985D-3CAE92CF612A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DED1D9-3C64-4E1F-985D-3CAE92CF612A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DED1D9-3C64-4E1F-985D-3CAE92CF612A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
