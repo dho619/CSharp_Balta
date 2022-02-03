@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\gbarbosa\.nuget\packages\mysql.data.entityframework\8.0.28\contentFiles\any\netstandard2.1\app.config.transform" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpaUserControl.Domain\SpaUserControl.Domain.csproj" />
+    <ProjectReference Include="..\SpaUserControl.Infraestructure\SpaUserControl.Infraestructure.csproj" />
+  </ItemGroup>
+
+</Project>
