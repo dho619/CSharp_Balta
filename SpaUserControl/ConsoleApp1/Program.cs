@@ -1,7 +1,9 @@
-﻿using SpaUserControl.Domain.Contracts.Repositories;
-using SpaUserControl.Domain.Models;
-using SpaUserControl.Infraestructure.Repositories;
+﻿using SpaUserControl.Domain.Contracts.Services;
+using SpaUserControl.Startup;
 using System;
+using System.Globalization;
+using System.Threading;
+using Unity;
 
 namespace ConsoleApp1
 {
@@ -9,20 +11,26 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var user = new User("Dho","dho2@hotmail.com");
+            CultureInfo ci = new CultureInfo("en-US");
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
 
-            user.SetPassword("dho619", "dho619");
-            user.Validate();
+            var container = new UnityContainer();
+            DependencyResolver.Resolve(container);
 
-            using (IUserRepository userRep = new UserRepository())
+            var service = container.Resolve<IUserService>();
+            try
             {
-                userRep.Create(user);
+                service.Register("Dho", "dho619@hotmail.com", "dho619", "dho619");
+                Console.WriteLine("Usuário cadastrado com sucesso!");
+            } 
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
-
-            using (IUserRepository userRep = new UserRepository())
+            finally
             {
-                var usr = userRep.Get("dho2@hotmail.com");
-                Console.WriteLine(usr.Name);
+                service.Dispose();
             }
         }
     }

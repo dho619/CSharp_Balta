@@ -11,11 +11,14 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SpaUserControl.Business\SpaUserControl.Business.csproj" />
     <ProjectReference Include="..\SpaUserControl.Domain\SpaUserControl.Domain.csproj" />
     <ProjectReference Include="..\SpaUserControl.Infraestructure\SpaUserControl.Infraestructure.csproj" />
+    <ProjectReference Include="..\SpaUserControl.Startup\SpaUserControl.Startup.csproj" />
   </ItemGroup>
 
 </Project>
