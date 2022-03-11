@@ -10,6 +10,7 @@ namespace Blog.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
+        // public DbSet<PostWithTagsCount> PostWithTagsCount { get; set; }
 
         protected override void OnConfiguring(
             DbContextOptionsBuilder options) {
@@ -21,6 +22,12 @@ namespace Blog.Data
             modelBuilder.ApplyConfiguration(new CategoryMap());
             modelBuilder.ApplyConfiguration(new UserMap());
             modelBuilder.ApplyConfiguration(new PostMap());
+            // modelBuilder.Entity<PostWithTagsCount>(x => {
+            //     x.ToSqlQuery(@"SELECT p.title as name, COUNT(pt.PostId) count  
+            //                 FROM post p 
+            //                 inner join PostTag pt on p.id=pt.PostId 
+            //                 group by p.title;");
+            // });
         }
     }
 }
